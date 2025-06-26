@@ -1,0 +1,74 @@
+<section class="homepage-main">
+  <div class="homepage-grid">
+    <!-- LEFT: KMS Info Card -->
+    <div class="kms-info-card">
+      <!-- ...expanded content from above... -->
+      <h2>What is a Knowledge Management System?</h2>
+      <p>
+        A <strong>Knowledge Management System (KMS)</strong> is a comprehensive platform that enables organizations to systematically capture, store, organize, and share knowledge and expertise. It acts as a centralized hub for information, making it easy for employees to access critical resources, best practices, and institutional knowledge.
+      </p>
+      <ul>
+        <li><strong>Centralizes</strong> organizational knowledge and documentation</li>
+        <li><strong>Improves</strong> decision-making and problem-solving</li>
+        <li><strong>Accelerates</strong> onboarding and training for new team members</li>
+        <li><strong>Promotes</strong> collaboration and innovation across departments</li>
+        <li><strong>Reduces</strong> knowledge loss due to employee turnover</li>
+        <li><strong>Enhances</strong> productivity by minimizing duplicated efforts</li>
+        <li><strong>Supports</strong> a culture of continuous learning and improvement</li>
+      </ul>
+      <p>
+        By leveraging a KMS, organizations can ensure that valuable insights and expertise are preserved and made available to everyone, fostering a more agile, informed, and competitive workforce.
+      </p>
+      <blockquote>
+        <em>“Knowledge is power. Sharing knowledge is the key to unlocking that power for your entire organization.”</em>
+      </blockquote>
+    </div>
+
+    <!-- RIGHT: Chart & Onboarding Image -->
+    <div class="homepage-right">
+      <div class="chart-container">
+        <apx-chart
+          *ngIf="!showLevelChart"
+          [series]="pieChartSeries"
+          [chart]="pieChartDetails"
+          [labels]="pieChartLabels"
+          [title]="pieChartTitle"
+          [legend]="pieChartLegend"
+          [tooltip]="pieChartTooltip">
+        </apx-chart>
+      </div>
+      <div class="flowchart-section compact">
+        <h3 class="flowchart-title">Onboarding Process Flow</h3>
+        <div class="flowchart-img-wrapper">
+          <img
+            #onboardImg
+            [class.animated-fade-in]="onboardImgVisible"
+            src="https://github.com/FOXBAT-12/image-/blob/main/Screenshot%202025-06-13%20124426.png?raw=true"
+            alt="Onboarding Process Flowchart"
+            class="flowchart-img"
+          />
+        </div>
+      </div>
+      <div *ngIf="showLevelChart" class="level-drilldown">
+        <button (click)="backToMainChart()" class="back-btn">&#8592; Back</button>
+        <h3>{{ selectedSkill }} - Level Distribution</h3>
+        <apx-chart
+          [series]="levelChartSeries"
+          [chart]="pieChartDetails"
+          [labels]="levelChartLabels"
+          [title]="pieChartTitle"
+          [legend]="pieChartLegend">
+        </apx-chart>
+        <ul class="level-list">
+          <li *ngFor="let label of levelChartLabels; let i = index">
+            <span class="level-label">{{ label }}</span>:
+            <span class="level-count">{{ levelChartSeries[i] }}</span>
+            <span class="level-percent">
+              ({{ getLevelPercentage(i) | number:'1.0-1' }}%)
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

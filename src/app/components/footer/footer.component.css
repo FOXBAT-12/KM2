@@ -1,0 +1,38 @@
+.km-footer-container {
+  background: #003366;
+  color: #fff;
+  padding: 24px 0 12px 0;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: 0;
+  text-align: center;
+  border-top: 2px solid #0056b3;
+}
+
+.km-footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 10px;
+}
+
+.footer-link {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: color 0.2s;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+.footer-link:hover {
+  background: #0056b3;
+  color: #fff;
+}
+
+.km-footer-copy {
+  font-size: 0.95rem;
+  color: #b0c4de;
+  margin-top: 8px;
+}

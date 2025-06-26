@@ -1,0 +1,53 @@
+<!-- <div class="sop-container"> -->
+  <!-- Add Font Awesome CDN in your index.html -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> -->
+
+  <!-- Folder List -->
+  <!-- <div class="folder-list">
+    <h3>Select a Folder</h3>
+    <div *ngFor="let folder of folderList" 
+         class="folder-item"
+         [class.active]="selectedFolder?.id === folder.id"
+         (click)="selectFolder(folder)">
+      <i class="fas fa-folder"></i>
+      {{folder.name}}
+    </div>
+  </div> -->
+
+  <!-- Files List -->
+  <!-- <div class="files-container" *ngIf="selectedFolder">
+    <h2><i class="fas fa-folder-open"></i> {{selectedFolder.name}}</h2>
+    
+    <div *ngIf="loading" class="loading">
+      <i class="fas fa-spinner fa-spin"></i> Loading files...
+    </div>
+    
+    <div *ngIf="error" class="error">
+      <i class="fas fa-exclamation-circle"></i> {{error}}
+    </div>
+    
+    <div *ngIf="!loading && pdfList.length === 0" class="no-files">
+      <i class="fas fa-folder-open"></i> No files found in this folder
+    </div>
+
+    <div 
+      *ngIf="!loading && pdfList.length > 0" 
+      class="file-list" 
+      style="max-height: 400px; overflow-y: auto;" 
+      (scroll)="onScroll($event)">
+      <div *ngFor="let file of pdfList" class="file-item">
+        <div class="file-info">
+          <i [class]="getFileIcon(file.fileType)"></i>
+          <span class="file-name">{{file.fileName}}</span>
+          <span class="file-type">({{file.fileType}})</span>
+        </div>
+        <button 
+          [disabled]="!file.id || !file.content" 
+          (click)="downloadPdf(file)" 
+          class="download-btn">
+          <i class="fas fa-download"></i> Download
+        </button>
+      </div>
+    </div>
+  </div>
+</div> -->

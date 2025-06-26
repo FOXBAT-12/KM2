@@ -1,0 +1,49 @@
+<nav class="km-navbar-container">
+  <div class="km-navbar-flex">
+    <div class="logo-nav-item">
+      <img src="https://tse2.mm.bing.net/th/id/OIP.vG1s2TB-CZY0BJ2ZZw-MHwHaHa?rs=1&pid=ImgDetMain" alt="Company Logo" class="company-logo-navbar">
+    </div>
+    <ul class="nav nav-pills km-navbar">
+      <!-- Standalone Home link -->
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/app-homepage" routerLinkActive="active">Home</a>
+      </li>
+      <!-- Dropdown for most links except Home, Onboarding/Offboarding, Login/Logout -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="mainDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+          Menu
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="mainDropdown">
+          <li><a class="dropdown-item" routerLink="/app-sop" routerLinkActive="active">SOP</a></li>
+          <li><a class="dropdown-item" routerLink="/app-kedb" routerLinkActive="active">KEDB</a></li> 
+          <li><a class="dropdown-item" routerLink="/app-designdocuments" routerLinkActive="active">Design Documents</a></li>
+          <li><a class="dropdown-item" routerLink="/app-kmteammember" routerLinkActive="active">KM Team Members</a></li>
+          <li><a class="dropdown-item" routerLink="/app-skillmatrix" routerLinkActive="active">Skill Matrix</a></li>
+          <li><a class="dropdown-item" routerLink="/app-toolsused" routerLinkActive="active">Tools Used</a></li>
+          <li><a class="dropdown-item" routerLink="/app-smedirectory" routerLinkActive="active">SME Directory</a></li>
+          <li><a class="dropdown-item" routerLink="/app-governance" routerLinkActive="active">Governance</a></li>
+          <li><a class="dropdown-item" routerLink="/app-bestpractice" routerLinkActive="active">Best Practices</a></li>
+          <li><a class="dropdown-item" routerLink="/app-handbook" routerLinkActive="active">Handbooks</a></li>
+          <li><a class="dropdown-item" routerLink="/app-ktplan" routerLinkActive="active">KT Plan</a></li>
+          <li><a class="dropdown-item" routerLink="/app-ktvideos" routerLinkActive="active">KT Videos</a></li>
+        </ul>
+      </li>
+      <!-- Standalone links -->
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/app-onboarding" routerLinkActive="active">Onboarding Tracker</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/app-offboarding" routerLinkActive="active">Offboarding Tracker</a>
+      </li>
+      <li class="nav-item" *ngIf="!isLoggedIn">
+        <a class="nav-link" routerLink="/app-login" routerLinkActive="active">Log in</a>
+      </li>
+      <li class="nav-item" *ngIf="isLoggedIn">
+        <a class="nav-link" style="cursor:pointer" (click)="logout()">Log out</a>
+      </li>
+    </ul>
+    <div class="nrg-logo-nav-item">
+      <img src="https://purepng.com/public/uploads/thumbnail/purepng.com-nrg-energy-logologobrand-logoiconslogos-251519939980lgefr.png" alt="NRG Logo" class="nrg-logo-navbar">
+    </div>
+  </div>
+</nav>

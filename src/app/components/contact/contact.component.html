@@ -1,0 +1,33 @@
+<section class="contact-section">
+  <h2 class="contact-title">Contact Us</h2>
+  <p class="contact-desc">
+    Have questions, feedback, or need support? Reach out to the Knowledge Management Team!
+  </p>
+  <div class="contact-grid">
+    <form class="contact-form" (ngSubmit)="sendMessage()" #contactForm="ngForm" autocomplete="off">
+      <label>
+        Name
+        <input type="text" placeholder="Your Name" [(ngModel)]="contact.name" name="name" required>
+      </label>
+      <label>
+        Email
+        <input type="email" placeholder="Your Email" [(ngModel)]="contact.email" name="email" onchange="
+    contact.email" required >
+      </label>
+      <label>
+        Message
+        <textarea rows="4" placeholder="How can we help you?" [(ngModel)]="contact.message" name="message" required></textarea>
+      </label>
+      <button type="submit" class="contact-btn" [disabled]="contactForm.invalid">Send Message</button>
+      <div *ngIf="success" class="contact-success">{{ success }}</div>
+      <div *ngIf="error" class="contact-error">{{ error }}</div>
+    </form>
+    <div class="contact-info">
+      <h3>Knowledge Management Team</h3>
+      <p>Email: <a href="mailto:km-support&#64;cognizant.com">km-support&#64;cognizant.com</a></p>
+      <p>Phone: +1-800-123-4567</p>
+      <p>Location: Cognizant Technology Solutions, India</p>
+      <p>For urgent issues, please contact your project manager or the KMS administrator directly.</p>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,266 @@
+/* .sop-container {
+  max-width: 1100px;
+  margin: 40px auto;
+  background: #f8fafc;
+  border-radius: 18px;
+  box-shadow: 0 6px 32px rgba(0, 40, 100, 0.12);
+  padding: 32px 36px 36px 36px;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  display: flex;
+  gap: 20px;
+}
+
+.sop-title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1a365d;
+  margin-bottom: 28px;
+  letter-spacing: 1px;
+}
+
+.sop-loading,
+.sop-error {
+  text-align: center;
+  margin-bottom: 18px;
+  font-size: 1.1rem;
+}
+
+.sop-loading {
+  color: #0078d4;
+}
+
+.sop-error {
+  color: #d32f2f;
+  background: #ffeaea;
+  border-radius: 6px;
+  padding: 8px 0;
+}
+
+.sop-flex-layout {
+  display: flex;
+  gap: 36px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.sop-folder-list {
+  min-width: 260px;
+  background: #e3eefd;
+  border-radius: 12px;
+  padding: 24px 18px;
+  box-shadow: 0 2px 8px rgba(0, 40, 100, 0.07);
+  width: 300px;
+  border-right: 1px solid #ddd;
+}
+
+.sop-folder-list h2 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #1a365d;
+  margin-bottom: 18px;
+  text-align: left;
+}
+
+.sop-folder-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sop-folder-list li {
+  padding: 10px 14px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  background: #f4f8ff;
+  color: #1a365d;
+  font-weight: 500;
+  transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+  cursor: pointer;
+  border: 1px solid transparent;
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+}
+
+.sop-folder-list li:hover,
+.sop-folder-list li.selected {
+  background: #1976d2;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.08);
+  border: 1px solid #1565c0;
+}
+
+.folder-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  margin: 5px 0;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.folder-item:hover {
+  background-color: #f8f9fa;
+}
+
+.folder-item.active {
+  background-color: #e3f2fd;
+  color: #0d6efd;
+}
+
+.folder-item i {
+  color: #ffd700;
+}
+
+.sop-file-list {
+  flex: 1 1 350px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px 22px;
+  box-shadow: 0 2px 8px rgba(0, 40, 100, 0.07);
+  min-width: 320px;
+}
+
+.sop-file-list h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1a365d;
+  margin-bottom: 18px;
+}
+
+.sop-file-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sop-file-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #e3eefd;
+  font-size: 1rem;
+  padding: 10px;
+}
+
+.sop-file-list li:last-child {
+  border-bottom: none;
+}
+
+.sop-file-list button {
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 6px 18px;
+  font-size: 0.98rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.18s;
+  margin-left: 18px;
+}
+
+.sop-file-list button:hover {
+  background: #1251a2;
+}
+
+.files-container {
+  flex: 1;
+  padding: 20px;
+}
+
+.file-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.file-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.file-item:hover {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.file-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.file-info i {
+  font-size: 1.2em;
+}
+
+.file-name {
+  font-weight: 500;
+}
+
+.file-type {
+  color: #6c757d;
+  font-size: 0.9em;
+}
+
+.download-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.download-btn:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.download-btn:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+.loading, .error, .no-files {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  text-align: center;
+  color: #6c757d;
+}
+
+.error {
+  color: #dc3545;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 4px;
+}
+
+@media (max-width: 900px) {
+  .sop-flex-layout {
+    flex-direction: column;
+    gap: 18px;
+  }
+  .sop-folder-list,
+  .sop-file-list {
+    min-width: unset;
+    width: 100%;
+  }
+} */

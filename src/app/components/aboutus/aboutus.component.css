@@ -1,0 +1,54 @@
+.aboutus-container {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 32px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+.aboutus-container h1 {
+  text-align: center;
+  color: #003366;
+  margin-bottom: 32px;
+}
+
+.company-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+}
+
+.company-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.07);
+  padding: 28px 22px;
+  flex: 1 1 350px;
+  max-width: 480px;
+  min-width: 300px;
+  text-align: center;
+}
+
+.aboutus-logo {
+  height: 64px;
+  margin-bottom: 16px;
+}
+
+.company-card h2 {
+  color: #003366;
+  margin-bottom: 10px;
+}
+
+.company-card h3 {
+  color: #0056b3;
+  margin-top: 18px;
+  margin-bottom: 8px;
+}
+
+.company-card p {
+  color: #222;
+  font-size: 1rem;
+  margin-bottom: 0;
+}

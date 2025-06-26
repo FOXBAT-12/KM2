@@ -1,0 +1,11 @@
+html, body, app-root {
+  margin: 0;
+  padding: 0;
+}
+
+.km-navbar-container {
+  margin-top: 0;
+  padding-top: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
