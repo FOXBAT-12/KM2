@@ -40,8 +40,7 @@ export const routes: Routes = [
   },
   {
     path:'app-sop',
-    component:SopComponent, 
-    canActivate:[authGuard]
+    component:SopComponent
   },
   {
     path: 'app-faq',
@@ -57,68 +56,55 @@ export const routes: Routes = [
   },  
   {
     path: 'app-kedb',
-    component:KedbComponent,
-    canActivate:[authGuard]
+    component:KedbComponent
   },
   {
     path:'app-skillmatrix',
-    component:SkillmatrixComponent,
-    canActivate:[authGuard]
+    component:SkillmatrixComponent
   },
   {
     path:'app-kmteammember',
-    component:KmteammemberComponent,
-    canActivate:[authGuard]
+    component:KmteammemberComponent
   },
   {
     path:'app-toolsused',
-    component:ToolsusedComponent,
-    canActivate:[authGuard]
+    component:ToolsusedComponent
   },
   {
     path:'app-designdocuments',
-    component:DesigndocumentsComponent,
-    canActivate:[authGuard]
+    component:DesigndocumentsComponent
   },
   {
     path:'app-smedirectory',
-    component: SmedirectoryComponent,
-    canActivate:[authGuard]
+    component: SmedirectoryComponent
   },
   {
     path:'app-governance',
-    component:GovernanceComponent,
-    canActivate:[authGuard]
+    component:GovernanceComponent
   }, 
   { 
     path: 'app-bestpractice',
-    component: BestpracticeComponent,
-    canActivate:[authGuard]
+    component: BestpracticeComponent
   },
   {
     path: 'app-handbook',
-    component: HandbookComponent,
-    canActivate:[authGuard]
+    component: HandbookComponent
   }, 
   {
     path: 'app-ktplan',
-    component:KtplanComponent,
-    canActivate:[authGuard]
+    component:KtplanComponent
   },
   {
     path:'app-ktvideos',
-    component: KtvideosComponent,
-    canActivate:[authGuard]
+    component: KtvideosComponent
   },
   {
     path: 'app-offboarding',
-    component: OffboardingComponent,
-    canActivate:[authGuard]
+    component: OffboardingComponent
   },
   {
     path: 'app-onboarding',
-    component: OnboardingComponent,
-    canActivate:[authGuard]
+    component: OnboardingComponent
   }
 
 ];
